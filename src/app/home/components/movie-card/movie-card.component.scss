@@ -1,0 +1,29 @@
+img {
+  width: 150px;
+}
+
+.card {
+  &:hover {
+    background-color: grey;
+  }
+
+  &-footer {
+    padding: 10px;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &-icon {
+      color: yellow;
+    }
+  }
+}
+
+.card-border {
+  border: 1px solid grey;
+  height: 90%;
+  border-radius: 3px;
+}

@@ -1,0 +1,13 @@
+<!-- <mat-select >
+  <mat-option *ngFor="let language of languages" >
+    {{ language.view }}
+  </mat-option>
+</mat-select> -->
+
+<div class="card flex justify-content-center">
+  <p-dropdown
+    [options]="languages"
+    [formControl]="selectedLanguage"
+    optionLabel="language"
+  ></p-dropdown>
+</div>

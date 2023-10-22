@@ -1,0 +1,9 @@
+<div *ngIf="movie">
+  <img [src]="imageSource" [alt]="movie.overview">
+  <div>
+    <h1>{{ movie.title }}</h1>
+    <h2 *ngIf="movie.title !== movie.original_title">{{ movie.original_title }}</h2>
+    <p>{{movie.overview}}</p>
+    <p>Rating: {{roundAverage(movie.vote_average) }}/10 of {{movie.vote_count}} votes</p>
+  </div>
+</div>

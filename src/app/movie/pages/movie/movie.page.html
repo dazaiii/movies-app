@@ -1,0 +1,3 @@
+<app-movie [movie]="movie$ | async"></app-movie>
+<app-actor-list [actors]="actors$ |async"></app-actor-list>
+<app-review-list [paginatedReviews]="reviews$ | async" (pageChanged)="reviewPageChanged($event)"></app-review-list>

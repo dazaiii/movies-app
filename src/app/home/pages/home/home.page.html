@@ -1,0 +1,8 @@
+<app-movies-list
+  [movies]="nowPlayingMovies$ | async"
+  title="Now playing"
+></app-movies-list>
+<app-movies-list
+  [movies]="topRatedMovies$ | async"
+  title="Top rated"
+></app-movies-list>

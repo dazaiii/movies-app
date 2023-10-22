@@ -1,0 +1,8 @@
+<ng-container *ngIf="paginatedReviews && paginatedReviews.results.length !== 0">
+  <ng-container *ngFor="let review of paginatedReviews.results">
+    <app-review [review]="review"></app-review>
+  </ng-container>
+  <!-- <mat-paginator [pageIndex]="paginatedReviews.page - 1" showFirstLastButtons="false"
+    [length]="paginatedReviews.total_results" pageSize="20" hidePageSize="true"
+    (page)="handlePageEvent($event)"></mat-paginator> -->
+</ng-container>
