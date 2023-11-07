@@ -1,2 +1,7 @@
-<a routerLink="">Home</a>
-<app-language-selector [language]="language" (languageChange)="onLanguageChange($event)"></app-language-selector>
+<div class="header">
+  <a routerLink="">Home</a>
+  <app-language-selector
+    [language]="language"
+    (languageChange)="onLanguageChange($event)"
+  ></app-language-selector>
+</div>

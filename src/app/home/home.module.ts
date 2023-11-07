@@ -6,9 +6,24 @@ import { MoviesListComponent } from './components/movies-list/movies-list.compon
 import { HomeRoutingModule } from './home-routing.module';
 import { CardModule } from 'primeng/card';
 import { CarouselModule } from 'primeng/carousel';
+import { AboutComponent } from './pages/about/about.component';
+import { ButtonModule } from 'primeng/button';
+import { ScrollTopModule } from 'primeng/scrolltop';
 
 @NgModule({
-  declarations: [HomePage, MovieCardComponent, MoviesListComponent],
-  imports: [CommonModule, HomeRoutingModule, CardModule, CarouselModule],
+  declarations: [
+    HomePage,
+    MovieCardComponent,
+    MoviesListComponent,
+    AboutComponent,
+  ],
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    CardModule,
+    CarouselModule,
+    ButtonModule,
+    ScrollTopModule,
+  ],
 })
 export class HomeModule {}

@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { LanguageEnum, languageMap } from '../../../shared/constant/languages';
 import { FormControl } from '@angular/forms';
-import { Subscription, distinctUntilChanged } from 'rxjs';
+import { Subscription, distinctUntilChanged, map } from 'rxjs';
 
 @Component({
   selector: 'app-language-selector',
@@ -25,6 +25,7 @@ export class LanguageSelectorComponent implements OnInit, OnDestroy {
   }[] = [];
 
   selectedLanguage: FormControl;
+  options: string[] = [];
 
   private readonly subscriptions: Subscription[] = [];
 
@@ -39,8 +40,11 @@ export class LanguageSelectorComponent implements OnInit, OnDestroy {
 
     this.subscriptions.push(
       this.selectedLanguage.valueChanges
-        .pipe(distinctUntilChanged())
-        .subscribe((language: LanguageEnum) => {
+        .pipe(
+          distinctUntilChanged(),
+          map((x: any) => x.value)
+        )
+        .subscribe((language: any) => {
           this.languageChange.emit(language);
           window.location.reload();
         })

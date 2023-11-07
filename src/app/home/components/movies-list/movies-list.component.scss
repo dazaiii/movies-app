@@ -1,0 +1,23 @@
+.now-playing {
+  padding: 32px;
+  background: rgb(9, 9, 121);
+  background: linear-gradient(
+    0deg,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(2, 0, 36, 1) 81%
+  );
+}
+
+.top-rated {
+  padding: 32px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 81%
+  );
+}
+
+h1 {
+  color: white;
+}

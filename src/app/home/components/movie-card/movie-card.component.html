@@ -1,7 +1,17 @@
-<div class="card-border m-2 text-center py-5 px-3">
-  <div class="flex justify-content-center">
-    <p>{{ movie.vote_average }} / 10</p>
+<div
+  class="card-container m-2 text-center py-5 px-3"
+  [routerLink]="['movie', movie.id]"
+>
+  <div>
+    <div class="vote-container">
+      <p>{{ movie.vote_average }} / 10</p>
+      <img
+        class="star-img"
+        src="../../../../assets/images/white-star.png"
+        alt="Star"
+      />
+    </div>
     <img mat-card-image [src]="imageSource" [alt]="movie.overview" />
-    <p class="p-card-header">{{ movie.title }}</p>
+    <p class="p-card-header mt-3">{{ movie.title }}</p>
   </div>
 </div>

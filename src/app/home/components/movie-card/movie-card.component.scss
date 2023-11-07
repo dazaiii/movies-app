@@ -22,8 +22,25 @@ img {
   }
 }
 
-.card-border {
-  border: 1px solid grey;
+.card-container {
+  background-color: rgba(255, 255, 255, 0.15);
   height: 90%;
-  border-radius: 3px;
+  border-radius: 5px;
+}
+
+.vote-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.star-img {
+  height: 16px;
+  width: auto;
+  margin: 0 0 16px;
+}
+
+p {
+  color: white;
 }

@@ -1,11 +1,16 @@
-<div *ngIf="movies">
+<div
+  [ngClass]="title === 'Now playing' ? 'now-playing' : 'top-rated'"
+  *ngIf="movies"
+>
   <h1>{{ title }}</h1>
   <p-carousel
     [value]="movies"
     [numVisible]="8"
-    [numScroll]="8"
-    [circular]="false"
+    [numScroll]="1"
+    [circular]="true"
     [responsiveOptions]="responsiveOptions"
+    [autoplayInterval]="3000"
+    [showIndicators]="false"
   >
     <ng-template let-movie pTemplate="item">
       <app-movie-card [movie]="movie"></app-movie-card>
