@@ -1,0 +1,15 @@
+.background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  width: 100vw;
+}
+
+.gradient {
+  background-image: linear-gradient(
+    to right,
+    rgba(2, 0, 36, 1) calc((50vw - 170px) - 340px),
+    rgba(2, 0, 36, 0.84) 50%,
+    rgba(2, 0, 36, 0.84) 100%
+  );
+}

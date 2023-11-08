@@ -11,10 +11,13 @@ export class MovieComponent implements OnChanges {
   @Input() movie: DetailedMovieHttpResponse | null;
 
   imageSource: string;
+  backgroundSource: string;
 
   ngOnChanges(): void {
     if (this.movie) {
       this.imageSource = environment.posterPath + this.movie.poster_path;
+      this.backgroundSource =
+        environment.backdropPath + this.movie.backdrop_path;
     }
   }
 
