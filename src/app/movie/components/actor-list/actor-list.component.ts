@@ -9,7 +9,26 @@ import { ActorHttpResponse } from '../../../../shared/response/credit.http-respo
 export class ActorListComponent {
   @Input() actors: ActorHttpResponse[] | null;
 
-  trackByActor(index: number, actor: ActorHttpResponse) {
-    return actor.id;
-  }
+  public readonly responsiveOptions = [
+    {
+      breakpoint: '1600px',
+      numVisible: 4,
+      numScroll: 1,
+    },
+    {
+      breakpoint: '1400px',
+      numVisible: 3,
+      numScroll: 1,
+    },
+    {
+      breakpoint: '1100px',
+      numVisible: 2,
+      numScroll: 1,
+    },
+    {
+      breakpoint: '767px',
+      numVisible: 1,
+      numScroll: 1,
+    },
+  ];
 }

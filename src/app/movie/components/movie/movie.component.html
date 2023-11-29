@@ -4,19 +4,37 @@
   *ngIf="movie"
 >
   <div class="gradient">
-    <div class="details">
-      <img [src]="imageSource" [alt]="movie.overview" />
-      <div>
+    <section class="details d-flex">
+      <div class="img-container">
+        <img [src]="imageSource" [alt]="movie.overview" />
+      </div>
+      <section class="movie-info">
         <h1>{{ movie.title }}</h1>
         <h2 *ngIf="movie.title !== movie.original_title">
           {{ movie.original_title }}
         </h2>
-        <p>{{ movie.overview }}</p>
+        <div class="facts">
+          <div class="d-flex">
+            <ng-container *ngFor="let genre of movie?.genres; let last = last">
+              <span *ngIf="!last">{{ genre.name }},</span>
+              <span *ngIf="last">{{ genre.name }}</span>
+            </ng-container>
+          </div>
+          <p>{{ runtime.hours }}h {{ runtime.minutes }}m</p>
+        </div>
+        <p-rating
+          [ngModel]="roundRating(movie.vote_average)"
+          [readonly]="true"
+          [stars]="10"
+          [cancel]="false"
+        ></p-rating>
         <p>
           Rating: {{ roundAverage(movie.vote_average) }}/10 of
           {{ movie.vote_count }} votes
         </p>
-      </div>
-    </div>
+
+        <p>{{ movie.overview }}</p>
+      </section>
+    </section>
   </div>
 </div>

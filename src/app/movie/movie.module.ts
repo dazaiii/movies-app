@@ -9,6 +9,8 @@ import { ReviewComponent } from './components/review/review.component';
 import { PaginatorModule } from 'primeng/paginator';
 import { ActorListComponent } from './components/actor-list/actor-list.component';
 import { ActorComponent } from './components/actor/actor.component';
+import { RatingModule } from 'primeng/rating';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,13 @@ import { ActorComponent } from './components/actor/actor.component';
     ActorListComponent,
     ActorComponent,
   ],
-  imports: [CommonModule, MovieRoutingModule, CardModule, PaginatorModule],
+  imports: [
+    CommonModule,
+    MovieRoutingModule,
+    CardModule,
+    PaginatorModule,
+    RatingModule,
+    CarouselModule,
+  ],
 })
 export class MovieModule {}

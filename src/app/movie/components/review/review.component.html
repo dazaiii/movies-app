@@ -1,11 +1,20 @@
-<!-- <mat-card>
-  <mat-card-header>
-    <p>{{ review.author }}</p>
-    <p>{{ review.created_at | date: "dd-MM-yyyy hh:mm" }}</p>
-  </mat-card-header>
-  <mat-card-content>
-    <p>
-      {{ review.content }}
+<div class="review d-flex justify-content-center align-items-center">
+  <p-card class="card-element">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center mb-3">
+        <div
+          *ngIf="review.author_details.avatar_path"
+          class="img-container mr-2"
+        >
+          <img [alt]="review.author + 'picture'" [src]="imageSource" />
+        </div>
+        <h3 class="m-0">{{ review.author }}</h3>
+      </div>
+      <p>{{ review.created_at | date : "dd-MM-yyyy hh:mm" }}</p>
+    </div>
+    <p *ngIf="review.author_details.rating">
+      {{ review.author_details.rating }} / 10
     </p>
-  </mat-card-content>
-</mat-card> -->
+    <p>{{ review.content }}</p>
+  </p-card>
+</div>

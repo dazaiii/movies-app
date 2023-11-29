@@ -15,4 +15,11 @@ export class MovieCardComponent implements OnInit {
   ngOnInit(): void {
     this.imageSource = environment.posterPath + this.movie.poster_path;
   }
+
+  roundAverage(average: number): number {
+    average *= 10;
+    average = Math.round(average);
+    average /= 10;
+    return average;
+  }
 }

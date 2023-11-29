@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ReviewHttpResponse } from '../../../../shared/response/review.http-response';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-review',
@@ -8,4 +9,11 @@ import { ReviewHttpResponse } from '../../../../shared/response/review.http-resp
 })
 export class ReviewComponent {
   @Input() review: ReviewHttpResponse;
+
+  imageSource: string;
+
+  ngOnChanges(): void {
+    this.imageSource =
+      environment.posterPath + this.review.author_details.avatar_path;
+  }
 }

@@ -1,9 +1,7 @@
-<!-- <mat-card>
-  <mat-card-content>
-    <img [src]="imgSource" [alt]="actor.name + ' picture.'" />
-  </mat-card-content>
-  <mat-card-footer>
+<div class="m-2 text-center py-5 px-3">
+  <div>
+    <img *ngIf="imgSource" [src]="imgSource" [alt]="actor.name + ' picture'" />
+    <p class="p-card-header mt-3">{{ actor.name }}</p>
     <p>{{ actor.character }}</p>
-    <p>{{ actor.name }}</p>
-  </mat-card-footer>
-</mat-card> -->
+  </div>
+</div>

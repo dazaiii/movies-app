@@ -1,0 +1,12 @@
+.reviews-container {
+  padding: 32px;
+
+  h2 {
+    margin-bottom: 32px;
+  }
+}
+
+:host ::ng-deep .p-paginator {
+  background-color: #020024;
+  color: white;
+}

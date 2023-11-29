@@ -1,0 +1,25 @@
+.review {
+  margin-bottom: 32px;
+}
+
+.card-element {
+  width: 80%;
+  text-align: justify;
+}
+
+:host ::ng-deep .p-card {
+  background-color: #ffffff2d;
+  color: white;
+}
+
+.img-container {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}

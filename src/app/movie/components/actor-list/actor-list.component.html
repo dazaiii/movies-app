@@ -1,5 +1,18 @@
 <ng-container *ngIf="actors">
-  <ng-container *ngFor="let actor of actors; trackBy: trackByActor">
-    <app-actor [actor]="actor"></app-actor>
-  </ng-container>
+  <div class="actors-container">
+    <h2>Cast</h2>
+
+    <p-carousel
+      [value]="actors"
+      [numVisible]="8"
+      [numScroll]="1"
+      [circular]="true"
+      [showIndicators]="false"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <ng-template let-actor pTemplate="item">
+        <app-actor [actor]="actor"></app-actor>
+      </ng-template>
+    </p-carousel>
+  </div>
 </ng-container>
