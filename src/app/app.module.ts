@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ApiKeyInterceptor } from './interceptors/api-key.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './header/header.component';
 import { HeaderModule } from './header/header.module';
 import { LanguageInterceptor } from './interceptors/language.interceptor';
+import { FooterModule } from './footer/footer.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +18,7 @@ import { LanguageInterceptor } from './interceptors/language.interceptor';
     HttpClientModule,
     BrowserAnimationsModule,
     HeaderModule,
+    FooterModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiKeyInterceptor, multi: true },

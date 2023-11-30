@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MovieHttpResponse } from '../../../../shared/response/movie.http-response';
 import { environment } from '../../../../environments/environment';
+import { MovieModel } from 'src/shared/models/movie.model';
 
 @Component({
   selector: 'app-movie-card',
@@ -8,12 +9,12 @@ import { environment } from '../../../../environments/environment';
   styleUrls: ['./movie-card.component.scss'],
 })
 export class MovieCardComponent implements OnInit {
-  @Input() movie: MovieHttpResponse;
+  @Input() movie: MovieModel;
 
   imageSource: string;
 
   ngOnInit(): void {
-    this.imageSource = environment.posterPath + this.movie.poster_path;
+    this.imageSource = environment.posterPath + this.movie.posterPath;
   }
 
   roundAverage(average: number): number {

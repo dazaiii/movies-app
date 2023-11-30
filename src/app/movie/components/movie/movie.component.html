@@ -13,6 +13,7 @@
         <h2 *ngIf="movie.title !== movie.original_title">
           {{ movie.original_title }}
         </h2>
+        <h3>{{ movie.tagline }}</h3>
         <div class="facts">
           <div class="d-flex">
             <ng-container *ngFor="let genre of movie?.genres; let last = last">
@@ -34,6 +35,48 @@
         </p>
 
         <p>{{ movie.overview }}</p>
+
+        <div class="d-flex col-12 mb-2">
+          <p class="col-4">Production:</p>
+          <div class="d-flex flex-column">
+            <ng-container
+              *ngFor="
+                let production of movie?.production_companies;
+                let last = last
+              "
+            >
+              <span *ngIf="!last">{{ production.name }},</span>
+              <span *ngIf="last">{{ production.name }}</span>
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="d-flex col-12 mb-2">
+          <p class="col-4">Production countries:</p>
+          <div class="d-flex flex-column">
+            <ng-container
+              *ngFor="
+                let production of movie?.production_countries;
+                let last = last
+              "
+            >
+              <span *ngIf="!last">{{ production.name }},</span>
+              <span *ngIf="last">{{ production.name }}</span>
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="d-flex col-12 mb-2">
+          <p class="col-4">Budget:</p>
+          <span clas="col-8">{{ movie.budget }} $</span>
+        </div>
+
+        <div class="d-flex col-12 mb-2">
+          <p class="col-4">Release date:</p>
+          <span clas="col-8">{{
+            movie.release_date | date : "dd-MM-yyyy"
+          }}</span>
+        </div>
       </section>
     </section>
   </div>

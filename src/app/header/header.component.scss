@@ -2,6 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 16px 32px;
   background-color: #020024;
+}
+
+.website-title {
+  font-family: "VinaSans";
+  font-size: 64px;
+  text-decoration: none;
+  color: #3b82f6;
 }

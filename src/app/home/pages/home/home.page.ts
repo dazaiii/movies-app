@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { MovieHttpService } from '../../../http-services/movie.http-service';
+import { MovieHttpService } from 'src/app/http-services/movie.http-service';
 import { Observable, map } from 'rxjs';
 import { MovieHttpResponse } from '../../../../shared/response/movie.http-response';
+import { MovieModel } from 'src/shared/models/movie.model';
 
 @Component({
   selector: 'app-home-page',
@@ -9,8 +10,8 @@ import { MovieHttpResponse } from '../../../../shared/response/movie.http-respon
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage {
-  nowPlayingMovies$: Observable<MovieHttpResponse[]>;
-  topRatedMovies$: Observable<MovieHttpResponse[]>;
+  nowPlayingMovies$: Observable<MovieModel[]>;
+  topRatedMovies$: Observable<MovieModel[]>;
 
   constructor(private readonly movieHttpService: MovieHttpService) {
     this.getNowPlaying();

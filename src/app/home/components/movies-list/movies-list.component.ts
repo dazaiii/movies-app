@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MovieHttpResponse } from '../../../../shared/response/movie.http-response';
+import { MovieModel } from 'src/shared/models/movie.model';
 
 @Component({
   selector: 'app-movies-list',
@@ -7,7 +7,7 @@ import { MovieHttpResponse } from '../../../../shared/response/movie.http-respon
   styleUrls: ['./movies-list.component.scss'],
 })
 export class MoviesListComponent {
-  @Input() movies: MovieHttpResponse[] | null;
+  @Input() movies: MovieModel[] | null;
   @Input() title: string;
 
   public readonly responsiveOptions = [
@@ -33,7 +33,7 @@ export class MoviesListComponent {
     },
   ];
 
-  trackByMovie(index: number, movie: MovieHttpResponse): number {
+  trackByMovie(index: number, movie: MovieModel): number {
     return movie.id;
   }
 }

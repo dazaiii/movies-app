@@ -11,6 +11,7 @@ import { ActorListComponent } from './components/actor-list/actor-list.component
 import { ActorComponent } from './components/actor/actor.component';
 import { RatingModule } from 'primeng/rating';
 import { CarouselModule } from 'primeng/carousel';
+import { ScrollTopModule } from 'primeng/scrolltop';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { CarouselModule } from 'primeng/carousel';
     PaginatorModule,
     RatingModule,
     CarouselModule,
+    ScrollTopModule,
   ],
 })
 export class MovieModule {}

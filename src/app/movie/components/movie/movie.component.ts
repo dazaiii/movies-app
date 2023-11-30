@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { DetailedMovieHttpResponse } from '../../../../shared/response/movie.http-response';
 import { environment } from '../../../../environments/environment';
+import { DetailedMovieModel } from 'src/shared/models/movie.model';
 
 @Component({
   selector: 'app-movie',
@@ -8,7 +9,7 @@ import { environment } from '../../../../environments/environment';
   styleUrls: ['./movie.component.scss'],
 })
 export class MovieComponent implements OnChanges {
-  @Input() movie: DetailedMovieHttpResponse | null;
+  @Input() movie: DetailedMovieModel | null;
 
   imageSource: string;
   backgroundSource: string;
@@ -16,7 +17,7 @@ export class MovieComponent implements OnChanges {
 
   ngOnChanges(): void {
     if (this.movie) {
-      this.imageSource = environment.posterPath + this.movie.poster_path;
+      this.imageSource = environment.posterPath + this.movie.posterPath;
       this.backgroundSource =
         environment.backdropPath + this.movie.backdrop_path;
       this.runtime = this.toHoursAndMinutes(this.movie.runtime);

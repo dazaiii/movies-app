@@ -15,19 +15,19 @@ export interface MovieHttpResponse {
   vote_count: number;
 }
 
-interface Genre {
+export interface Genre {
   id: number;
   name: string;
 }
 
-interface ProductionCompany {
+export interface ProductionCompany {
   id: number;
   logoPath: string;
   name: string;
   origin_country: string;
 }
 
-interface ProductionCountry {
+export interface ProductionCountry {
   iso_3166_1: string;
   name: string;
 }

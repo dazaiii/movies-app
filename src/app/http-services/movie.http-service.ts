@@ -2,11 +2,16 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { PaginatedResponse } from '../../shared/types/paginated.response';
-import { Observable, catchError } from 'rxjs';
+import { Observable, catchError, map } from 'rxjs';
 import {
   DetailedMovieHttpResponse,
   MovieHttpResponse,
 } from '../../shared/response/movie.http-response';
+import {
+  detailedMovieFactory,
+  movieFactory,
+} from 'src/shared/models/factory/movie.factory';
+import { DetailedMovieModel, MovieModel } from 'src/shared/models/movie.model';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +19,7 @@ import {
 export class MovieHttpService {
   constructor(private readonly httpClient: HttpClient) {}
 
-  getNowPlaying(page = 1): Observable<PaginatedResponse<MovieHttpResponse>> {
+  getNowPlaying(page = 1): Observable<PaginatedResponse<MovieModel>> {
     const params = new HttpParams({
       fromObject: {
         page,
@@ -29,6 +34,10 @@ export class MovieHttpService {
         }
       )
       .pipe(
+        map((movies: PaginatedResponse<MovieHttpResponse>) => ({
+          ...movies,
+          results: movies.results.map(movieFactory),
+        })),
         catchError((error) => {
           console.log(error);
           throw error;
@@ -36,7 +45,7 @@ export class MovieHttpService {
       );
   }
 
-  getTopRated(page = 1): Observable<PaginatedResponse<MovieHttpResponse>> {
+  getTopRated(page = 1): Observable<PaginatedResponse<MovieModel>> {
     const params = new HttpParams({
       fromObject: {
         page,
@@ -51,6 +60,10 @@ export class MovieHttpService {
         }
       )
       .pipe(
+        map((movies: PaginatedResponse<MovieHttpResponse>) => ({
+          ...movies,
+          results: movies.results.map(movieFactory),
+        })),
         catchError((error) => {
           console.log(error);
           throw error;
@@ -58,10 +71,13 @@ export class MovieHttpService {
       );
   }
 
-  getById(id: number): Observable<DetailedMovieHttpResponse> {
+  getById(id: number): Observable<DetailedMovieModel> {
     return this.httpClient
       .get<DetailedMovieHttpResponse>(`${environment.apiUrl}/movie/${id}`)
       .pipe(
+        map((movie) => {
+          return detailedMovieFactory(movie);
+        }),
         catchError((error) => {
           console.log(error);
           throw error;
