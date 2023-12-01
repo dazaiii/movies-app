@@ -1,0 +1,23 @@
+<ng-container *ngIf="!src; else image">
+  <ng-container [ngSwitch]="emptyImageType">
+    <img
+      *ngSwitchCase="'person'"
+      src="../../../assets/images/no-avatar.png"
+      alt="No person picture provided"
+    />
+    <img
+      *ngSwitchCase="'movie'"
+      src="../../../assets/images/no-image.jpg"
+      alt="No movie picture provided"
+    />
+    <img
+      *ngSwitchDefault
+      src="../../../assets/images/no-image.jpg"
+      alt="No picture provided"
+    />
+  </ng-container>
+</ng-container>
+
+<ng-template #image>
+  <img [src]="src" [alt]="alt" />
+</ng-template>

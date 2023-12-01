@@ -1,3 +1,14 @@
-img {
+:host ::ng-deep img {
   width: 150px;
+  aspect-ratio: 2/3;
+}
+
+.actor-container {
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 90%;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
 }

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { ReviewHttpResponse } from '../../../../shared/response/review.http-response';
 import { environment } from 'src/environments/environment';
+import { ReviewModel } from 'src/shared/models/review.model';
 
 @Component({
   selector: 'app-review',
@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./review.component.scss'],
 })
 export class ReviewComponent {
-  @Input() review: ReviewHttpResponse;
+  @Input() review: ReviewModel;
 
   imageSource: string;
 

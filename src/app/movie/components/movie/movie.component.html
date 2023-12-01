@@ -6,7 +6,11 @@
   <div class="gradient">
     <section class="details d-flex">
       <div class="img-container">
-        <img [src]="imageSource" [alt]="movie.overview" />
+        <app-image
+          [src]="imageSource"
+          [alt]="movie.overview"
+          [emptyImageType]="'movie'"
+        ></app-image>
       </div>
       <section class="movie-info">
         <h1>{{ movie.title }}</h1>

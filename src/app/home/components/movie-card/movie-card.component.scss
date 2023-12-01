@@ -3,10 +3,6 @@ img {
 }
 
 .card {
-  &:hover {
-    background-color: grey;
-  }
-
   &-footer {
     padding: 10px;
   }
@@ -26,6 +22,10 @@ img {
   background-color: rgba(255, 255, 255, 0.15);
   height: 90%;
   border-radius: 5px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
 }
 
 .vote-container {

@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { Observable, switchMap } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-import { DetailedMovieHttpResponse } from '../../../../shared/response/movie.http-response';
 import { PaginatedResponse } from '../../../../shared/types/paginated.response';
-import { ReviewHttpResponse } from '../../../../shared/response/review.http-response';
 import { ReviewHttpService } from '../../../http-services/review.http-service';
 import { CreditHttpService } from '../../../http-services/credit.http-service';
-import { ActorHttpResponse } from '../../../../shared/response/credit.http-response';
 import { MovieHttpService } from 'src/app/http-services/movie.http-service';
 import { DetailedMovieModel } from 'src/shared/models/movie.model';
+import { ActorModel } from 'src/shared/models/actor.model';
+import { ReviewModel } from 'src/shared/models/review.model';
 
 @Component({
   selector: 'app-movie-page',
@@ -17,8 +16,8 @@ import { DetailedMovieModel } from 'src/shared/models/movie.model';
 })
 export class MoviePageComponent {
   movie$: Observable<DetailedMovieModel>;
-  reviews$: Observable<PaginatedResponse<ReviewHttpResponse>>;
-  actors$: Observable<ActorHttpResponse[]>;
+  reviews$: Observable<PaginatedResponse<ReviewModel>>;
+  actors$: Observable<ActorModel[]>;
 
   constructor(
     private readonly movieHttpService: MovieHttpService,

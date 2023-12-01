@@ -6,14 +6,17 @@
           *ngIf="review.author_details.avatar_path"
           class="img-container mr-2"
         >
-          <img [alt]="review.author + 'picture'" [src]="imageSource" />
+          <img
+            [alt]="review.author_details.name + 'picture'"
+            [src]="imageSource"
+          />
         </div>
-        <h3 class="m-0">{{ review.author }}</h3>
+        <h3 class="m-0">{{ review.author_details.name }}</h3>
       </div>
       <p>{{ review.created_at | date : "dd-MM-yyyy hh:mm" }}</p>
     </div>
     <p *ngIf="review.author_details.rating">
-      {{ review.author_details.rating }} / 10
+      {{ review.author_details.rating }}/10
     </p>
     <p>{{ review.content }}</p>
   </p-card>

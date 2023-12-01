@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PaginatedResponse } from '../../../../shared/types/paginated.response';
-import { ReviewHttpResponse } from '../../../../shared/response/review.http-response';
+import { ReviewModel } from 'src/shared/models/review.model';
 // import { PageEvent } from '@angular/material/paginator';
 
 @Component({
@@ -9,7 +9,7 @@ import { ReviewHttpResponse } from '../../../../shared/response/review.http-resp
   styleUrls: ['./review-list.component.scss'],
 })
 export class ReviewListComponent {
-  @Input() paginatedReviews: PaginatedResponse<ReviewHttpResponse> | null;
+  @Input() paginatedReviews: PaginatedResponse<ReviewModel> | null;
   @Output() pageChanged = new EventEmitter<number>();
 
   handlePageEvent(event: any): void {

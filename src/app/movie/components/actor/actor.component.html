@@ -1,6 +1,13 @@
-<div class="m-2 text-center py-5 px-3">
+<div
+  [routerLink]="['../../actor/', actor.id]"
+  class="m-2 text-center py-5 px-3 actor-container"
+>
   <div>
-    <img *ngIf="imgSource" [src]="imgSource" [alt]="actor.name + ' picture'" />
+    <app-image
+      [src]="imgSource"
+      [alt]="actor.name + ' picture'"
+      [emptyImageType]="'person'"
+    ></app-image>
     <p class="p-card-header mt-3">{{ actor.name }}</p>
     <p>{{ actor.character }}</p>
   </div>
