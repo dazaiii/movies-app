@@ -7,3 +7,8 @@ export const languageMap = new Map<LanguageEnum, string>([
   [LanguageEnum.polish, 'polish'],
   [LanguageEnum.english, 'english'],
 ]);
+
+export const i18nLanguageMap = new Map<LanguageEnum, string>([
+  [LanguageEnum.polish, 'pl'],
+  [LanguageEnum.english, 'en'],
+]);

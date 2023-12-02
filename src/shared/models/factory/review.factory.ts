@@ -7,6 +7,12 @@ export const reviewFactory = (
   return {
     content: reviewResponse.content,
     created_at: reviewResponse.created_at,
-    author_details: reviewResponse.author_details,
+    author_details: {
+      name:
+        reviewResponse.author_details.name ||
+        reviewResponse.author_details.username,
+      rating: reviewResponse.author_details.rating,
+      avatar_path: reviewResponse.author_details.avatar_path,
+    },
   };
 };

@@ -13,6 +13,8 @@ import { RatingModule } from 'primeng/rating';
 import { CarouselModule } from 'primeng/carousel';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { ImageComponent } from 'src/shared/components/image/image.component';
+import { ChipModule } from 'primeng/chip';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { ImageComponent } from 'src/shared/components/image/image.component';
     CarouselModule,
     ScrollTopModule,
     ImageComponent,
+    ChipModule,
+    TranslateModule.forChild(),
   ],
 })
 export class MovieModule {}

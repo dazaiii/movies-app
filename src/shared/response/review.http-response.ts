@@ -1,6 +1,6 @@
 interface AuthorDetails {
   name: string;
-  user_name: string;
+  username: string;
   avatar_path: string;
   rating: string;
 }

@@ -2,7 +2,7 @@
   class="reviews-container"
   *ngIf="paginatedReviews && paginatedReviews.results.length !== 0"
 >
-  <h2>Reviews</h2>
+  <h2>{{ "movie.review_list.reviews" | translate }}</h2>
   <ng-container *ngFor="let review of paginatedReviews.results">
     <app-review [review]="review"></app-review>
   </ng-container>

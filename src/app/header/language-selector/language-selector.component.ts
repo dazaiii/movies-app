@@ -10,6 +10,11 @@ import { LanguageEnum, languageMap } from '../../../shared/constant/languages';
 import { FormControl } from '@angular/forms';
 import { Subscription, distinctUntilChanged, map } from 'rxjs';
 
+type Language = {
+  value: LanguageEnum;
+  view: string;
+};
+
 @Component({
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
@@ -19,12 +24,9 @@ export class LanguageSelectorComponent implements OnInit, OnDestroy {
   @Input() language: LanguageEnum;
   @Output() languageChange = new EventEmitter<LanguageEnum>();
 
-  languages: {
-    value: LanguageEnum;
-    view: string;
-  }[] = [];
+  languages: Language[] = [];
 
-  selectedLanguage: FormControl;
+  selectedLanguage: FormControl<Language | null>;
   options: string[] = [];
 
   private readonly subscriptions: Subscription[] = [];
@@ -36,7 +38,10 @@ export class LanguageSelectorComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.selectedLanguage = new FormControl<LanguageEnum>(this.language);
+    this.selectedLanguage = new FormControl<Language | null>(
+      this.languages.find((language) => language.value === this.language) ??
+        null
+    );
 
     this.subscriptions.push(
       this.selectedLanguage.valueChanges

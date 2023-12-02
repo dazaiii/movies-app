@@ -3,20 +3,20 @@
     <section>
       <p class="website-title">Movies DB</p>
       <div class="elements d-flex flex-column">
-        <span>About</span>
+        <span>{{ "footer.about" | translate }}</span>
         <span>FAQ</span>
-        <span>Support</span>
+        <span>{{ "footer.support" | translate }}</span>
       </div>
     </section>
     <section>
-      <p class="website-title">Regulations</p>
+      <p class="website-title">{{ "footer.regulations" | translate }}</p>
       <div class="elements d-flex flex-column">
-        <span>Terms</span>
-        <span>Privacy policy</span>
+        <span>{{ "footer.terms" | translate }}</span>
+        <span>{{ "footer.privacy-policy" | translate }}</span>
       </div>
     </section>
     <section>
-      <p class="website-title">Contact</p>
+      <p class="website-title">{{ "footer.contact" | translate }}</p>
       <div class="elements d-flex align-items-center">
         <address>
           <a href="mailto:kin.baryczka@gmail.com">kin.baryczka@gmail.com</a>
@@ -25,7 +25,7 @@
     </section>
 
     <section>
-      <p class="website-title">Useful links</p>
+      <p class="website-title">{{ "footer.useful-links" | translate }}</p>
       <div class="elements d-flex flex-column">
         <a
           target="_blank"
@@ -39,15 +39,10 @@
 
   <section class="copyright">
     <div class="text">
-      <span> © Copyright </span>
-      <script>
-        {
-          {
-            document.write(new Date().getFullYear());
-          }
-        }
-      </script>
-      <span> 2023. Made by Kinga Baryczka</span>
+      <span>
+        © Copyright {{ actualYear }} {{ "footer.made-by" | translate }} Kinga
+        Baryczka
+      </span>
     </div>
   </section>
 </section>

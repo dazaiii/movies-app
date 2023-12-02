@@ -1,0 +1,43 @@
+{
+  "home": {
+    "about": {
+      "title": "Biblioteka filmów",
+      "sub-title": "Odkryj świat filmów w naszej rozległej bibliotece",
+      "description": "Zanurz się w różnorodnej kolekcji filmów, od klasycznych produkcji po perły ukryte w cieniu – czeka na ciebie najlepsze filmowe doświadczenie",
+      "get-started": "Rozpocznij"
+    },
+    "movies-list": {
+      "now-playing": "Teraz grane",
+      "top-rated": "Najwyżej oceniane"
+    }
+  },
+  "footer": {
+    "about": "O nas",
+    "support": "Wsparcie techniczne",
+    "regulations": "Regulamin",
+    "terms": "Warunki",
+    "privacy-policy": "Polityka prywatności",
+    "contact": "Kontakt",
+    "useful-links": "Przydatne linki",
+    "made-by": "Utworzone przez"
+  },
+  "movie": {
+    "movie": {
+      "rating": "Ocena",
+      "of": "z",
+      "votes": "głosów",
+      "release_date": "Data premiery",
+      "time": "Czas trwania",
+      "production": "Produkcja",
+      "production_countries": "Kraje produkcji",
+      "budget": "Budżet",
+      "hours": "g"
+    },
+    "actor-list": {
+      "cast": "Obsada"
+    },
+    "review_list": {
+      "reviews": "Recenzje"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "home": {
+    "about": {
+      "title": "Movies Library",
+      "sub-title": "Explore a world of movies in our extensive film library",
+      "description": "Dive into a diverse collection of films, from classics to hidden gems – your ultimate cinematic experience awaits.",
+      "get-started": "Get started"
+    },
+    "movies-list": {
+      "now-playing": "Now playing",
+      "top-rated": "Top rated"
+    }
+  },
+  "footer": {
+    "about": "About",
+    "support": "Support",
+    "regulations": "Regulations",
+    "terms": "Terms",
+    "privacy-policy": "Privacy policy",
+    "contact": "Contact",
+    "useful-links": "Useful links",
+    "made-by": "Made by"
+  },
+  "movie": {
+    "movie": {
+      "rating": "Rating",
+      "of": "of",
+      "votes": "votes",
+      "release_date": "Release date",
+      "time": "Time",
+      "production": "Production",
+      "production_countries": "Production countries",
+      "budget": "Budget",
+      "hours": "h"
+    },
+    "actor-list": {
+      "cast": "Cast"
+    },
+    "review_list": {
+      "reviews": "Reviews"
+    }
+  }
+}

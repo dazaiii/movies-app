@@ -43,11 +43,6 @@
   }
 }
 
-.facts {
-  display: flex;
-  flex-direction: column;
-}
-
 .movie-info {
   display: flex;
   flex-direction: column;
@@ -55,14 +50,17 @@
   align-items: flex-start;
   align-content: center;
   box-sizing: border-box;
-  padding-left: 40px;
+
+  @media only screen and (min-width: 800px) {
+    padding-left: 40px;
+  }
 
   @media only screen and (max-width: 800px) {
     margin-top: 64px;
   }
 
   h1 {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   h2 {
@@ -76,4 +74,8 @@
   p.col-4 {
     margin: 0;
   }
+}
+
+.p-element {
+  margin-right: 8px;
 }

@@ -6,13 +6,12 @@
 >
   <div class="gradient">
     <div class="top-left">
-      <h1>Movies Library</h1>
-      <h2>Enjoy movies library on all your devices</h2>
+      <h1>{{ "home.about.title" | translate }}</h1>
+      <h2>{{ "home.about.sub-title" | translate }}</h2>
       <h3>
-        Discover thousands of films for free, thanks to the generous support of
-        your public library or university.
+        {{ "home.about.description" | translate }}
       </h3>
-      <p-button label="Get started"></p-button>
+      <p-button [label]="'home.about.get-started' | translate"></p-button>
     </div>
   </div>
 </div>

@@ -9,6 +9,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { AboutComponent } from './components/about/about.component';
 import { ButtonModule } from 'primeng/button';
 import { ScrollTopModule } from 'primeng/scrolltop';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ScrollTopModule } from 'primeng/scrolltop';
     CarouselModule,
     ButtonModule,
     ScrollTopModule,
+    TranslateModule.forChild(),
   ],
 })
 export class HomeModule {}

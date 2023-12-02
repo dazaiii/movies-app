@@ -1,8 +1,7 @@
-<div
-  [ngClass]="title === 'Now playing' ? 'now-playing' : 'top-rated'"
-  *ngIf="movies"
->
-  <h1>{{ title }}</h1>
+<div class="movie-list" *ngIf="movies">
+  <h1>
+    {{ title }}
+  </h1>
   <p-carousel
     [value]="movies"
     [numVisible]="8"
