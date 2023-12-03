@@ -1,1 +1,33 @@
-<p>actor-details works!</p>
+<section *ngIf="actor">
+  <div class="details d-flex">
+    <div class="img-container">
+      <app-image
+        [src]="imageSource"
+        [alt]="actor + ' picture'"
+        [emptyImageType]="'person'"
+      ></app-image>
+    </div>
+    <section class="actor-info">
+      <h1>{{ actor.name }}</h1>
+      <ng-container *ngIf="actor.biography">
+        <h2>{{ "actor.actor_details.biography" | translate }}</h2>
+        <p>{{ actor.biography }}</p>
+      </ng-container>
+
+      <div class="d-flex col-12 mb-2">
+        <p class="col-4">{{ "actor.actor_details.birthday" | translate }}:</p>
+        <span class="col-8">{{ actor.birthday | date : "dd-MM-yyyy" }}</span>
+      </div>
+      <div *ngIf="actor.deathday" class="d-flex col-12 mb-2">
+        <p class="col-4">{{ "actor.actor_details.deathday" | translate }}:</p>
+        <span class="col-8">{{ actor.deathday | date : "dd-MM-yyyy" }}</span>
+      </div>
+      <div *ngIf="actor.homepage" class="d-flex col-12 mb-2">
+        <p class="col-4">{{ "actor.actor_details.homepage" | translate }}:</p>
+        <a class="col-8" target="_blank" [href]="actor.homepage">{{
+          actor.homepage
+        }}</a>
+      </div>
+    </section>
+  </div>
+</section>

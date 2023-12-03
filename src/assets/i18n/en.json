@@ -39,5 +39,13 @@
     "review_list": {
       "reviews": "Reviews"
     }
+  },
+  "actor": {
+    "actor_details": {
+      "biography": "Biography",
+      "birthday": "Birthday",
+      "deathday": "Deathday",
+      "homepage": "Homepage"
+    }
   }
 }

@@ -1,1 +1,7 @@
-<p>actor-page works!</p>
+<section class="actor-container">
+  <app-actor-details [actor]="actor$ | async"></app-actor-details>
+  <app-actor-movie-credits
+    [movieCredits]="movieCredits$ | async"
+  ></app-actor-movie-credits>
+  <p-scrollTop></p-scrollTop>
+</section>

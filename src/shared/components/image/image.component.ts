@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./image.component.scss'],
 })
 export class ImageComponent {
-  @Input() src: string;
+  @Input() src: string | null;
   @Input() alt: string;
   @Input() emptyImageType: 'person' | 'movie';
 }

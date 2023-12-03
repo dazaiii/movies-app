@@ -15,6 +15,7 @@ import { ScrollTopModule } from 'primeng/scrolltop';
 import { ImageComponent } from 'src/shared/components/image/image.component';
 import { ChipModule } from 'primeng/chip';
 import { TranslateModule } from '@ngx-translate/core';
+import { RoundNumberPipe } from 'src/shared/pipes/round-number.pipe';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { TranslateModule } from '@ngx-translate/core';
     ImageComponent,
     ChipModule,
     TranslateModule.forChild(),
+    RoundNumberPipe,
   ],
 })
 export class MovieModule {}

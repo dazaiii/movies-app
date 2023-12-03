@@ -1,0 +1,24 @@
+.movie-credit {
+  padding: 16px;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .movie {
+    @media only screen and (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+
+  .info {
+    justify-content: space-between;
+    @media only screen and (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+}
+
+:host ::ng-deep img {
+  aspect-ratio: 2/3;
+  width: 100px;
+}

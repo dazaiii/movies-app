@@ -2,9 +2,16 @@
   margin-bottom: 32px;
 }
 
+.info {
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+}
+
 .card-element {
   width: 80%;
   text-align: justify;
+  word-break: break-word;
 }
 
 :host ::ng-deep .p-card {

@@ -29,15 +29,4 @@ export class MovieComponent implements OnChanges {
     const minutes = totalMinutes % 60;
     return { hours, minutes };
   }
-
-  roundRating(average: number): number {
-    return Math.round(average);
-  }
-
-  roundAverage(average: number): number {
-    average *= 10;
-    average = Math.round(average);
-    average /= 10;
-    return average;
-  }
 }

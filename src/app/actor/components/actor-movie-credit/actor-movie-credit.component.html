@@ -1,0 +1,28 @@
+<div class="movie-credit" [routerLink]="['../../movie', movieCredit.id]">
+  <div class="d-flex align-items-center gap-4 movie">
+    <h3>{{ movieCredit.release_date | date : "yyyy" }}</h3>
+    <app-image
+      [src]="imageSource"
+      [alt]="movieCredit.title + ' picture'"
+      [emptyImageType]="'movie'"
+    ></app-image>
+    <div class="d-flex w-100 info">
+      <div>
+        <h3>{{ movieCredit.title }}</h3>
+        <p>{{ movieCredit.character }}</p>
+      </div>
+      <div>
+        <p-rating
+          [ngModel]="movieCredit.vote_average | roundNumber"
+          [readonly]="true"
+          [stars]="10"
+          [cancel]="false"
+        ></p-rating>
+        <p>
+          Rating: {{ movieCredit.vote_average | roundNumber : 1 }} of
+          {{ movieCredit.vote_count }} votes
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

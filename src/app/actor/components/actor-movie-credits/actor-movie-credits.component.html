@@ -1,0 +1,8 @@
+<section>
+  <h2 *ngIf="movieCredits">Movie credits</h2>
+  <ng-container *ngFor="let movieCredit of movieCredits">
+    <app-actor-movie-credit
+      [movieCredit]="movieCredit"
+    ></app-actor-movie-credit>
+  </ng-container>
+</section>
