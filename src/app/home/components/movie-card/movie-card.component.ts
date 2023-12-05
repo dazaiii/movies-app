@@ -1,5 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { MovieHttpResponse } from '../../../../shared/response/movie.http-response';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
 import { environment } from '../../../../environments/environment';
 import { MovieModel } from 'src/shared/models/movie.model';
 
@@ -7,14 +11,17 @@ import { MovieModel } from 'src/shared/models/movie.model';
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MovieCardComponent implements OnInit {
   @Input() movie: MovieModel;
 
-  imageSource: string;
+  imageSource: string | null;
 
   ngOnInit(): void {
-    this.imageSource = environment.posterPath + this.movie.posterPath;
+    this.imageSource = this.movie.posterPath
+      ? environment.posterPath + this.movie.posterPath
+      : null;
   }
 
   roundAverage(average: number): number {

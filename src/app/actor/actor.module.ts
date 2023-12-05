@@ -12,7 +12,7 @@ import { ActorMovieCreditComponent } from './components/actor-movie-credit/actor
 import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
 import { RoundNumberPipe } from 'src/shared/pipes/round-number.pipe';
-
+import { ScrollingModule } from '@angular/cdk/scrolling';
 @NgModule({
   declarations: [
     ActorPageComponent,
@@ -30,6 +30,7 @@ import { RoundNumberPipe } from 'src/shared/pipes/round-number.pipe';
     RatingModule,
     FormsModule,
     RoundNumberPipe,
+    ScrollingModule,
   ],
 })
 export class ActorModule {}

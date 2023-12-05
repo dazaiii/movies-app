@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { ActorDetailsModel } from 'src/shared/models/actor-details.model';
 
@@ -6,15 +6,18 @@ import { ActorDetailsModel } from 'src/shared/models/actor-details.model';
   selector: 'app-actor-details',
   templateUrl: './actor-details.component.html',
   styleUrls: ['./actor-details.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ActorDetailsComponent {
   @Input() actor: ActorDetailsModel | null;
 
-  imageSource: string;
+  imageSource: string | null;
 
   ngOnChanges(): void {
     if (this.actor) {
-      this.imageSource = environment.posterPath + this.actor.profile_path;
+      this.imageSource = this.actor.profile_path
+        ? environment.posterPath + this.actor.profile_path
+        : null;
     }
   }
 }

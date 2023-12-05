@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { MovieHttpService } from 'src/app/http-services/movie.http-service';
 import { Observable, map } from 'rxjs';
-import { MovieHttpResponse } from '../../../../shared/response/movie.http-response';
 import { MovieModel } from 'src/shared/models/movie.model';
 
 @Component({

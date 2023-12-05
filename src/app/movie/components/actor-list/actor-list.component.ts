@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { responsiveOptions } from 'src/shared/constant/responsive-options';
 import { ActorModel } from 'src/shared/models/actor.model';
 
@@ -6,6 +6,7 @@ import { ActorModel } from 'src/shared/models/actor.model';
   selector: 'app-actor-list',
   templateUrl: './actor-list.component.html',
   styleUrls: ['./actor-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ActorListComponent {
   @Input() actors: ActorModel[] | null;

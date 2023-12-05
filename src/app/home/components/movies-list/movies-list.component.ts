@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { responsiveOptions } from 'src/shared/constant/responsive-options';
 import { MovieModel } from 'src/shared/models/movie.model';
 
@@ -6,6 +6,7 @@ import { MovieModel } from 'src/shared/models/movie.model';
   selector: 'app-movies-list',
   templateUrl: './movies-list.component.html',
   styleUrls: ['./movies-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MoviesListComponent {
   @Input() movies: MovieModel[] | null;

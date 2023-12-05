@@ -2,26 +2,32 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
 
-## Development server
+## About
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Project hosted on: https://magical-sunburst-005073.netlify.app/
 
-## Code scaffolding
+Tech stack: Angular 16, PrimeNG, ngx-translate, Boostrap 5, RxJS, TypeScript, HTML, SCSS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Movie database which consists of detailed info about movies and
+actors. Page allows to translate its content to polish or english.
+App is using public API for backend named TMDB.
 
-## Build
+## Now playing and top rated movies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![Screen1](docs/screenshots/moviesapp2.png)
 
-## Running unit tests
+## Movie page
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Screen1](docs/screenshots/moviesapp3.png)
 
-## Running end-to-end tests
+## Movie cast and reviews
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![Screen1](docs/screenshots/moviesapp4.png)
 
-## Further help
+## Actor page
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Screen1](docs/screenshots/moviesapp5.png)
+
+## Actor's movie credits
+
+![Screen1](docs/screenshots/moviesapp6.png)

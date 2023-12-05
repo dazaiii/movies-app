@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { MovieCreditsModel } from 'src/shared/models/actor-details.model';
 
@@ -6,6 +6,7 @@ import { MovieCreditsModel } from 'src/shared/models/actor-details.model';
   selector: 'app-actor-movie-credit',
   templateUrl: './actor-movie-credit.component.html',
   styleUrls: ['./actor-movie-credit.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ActorMovieCreditComponent {
   @Input() movieCredit: MovieCreditsModel;

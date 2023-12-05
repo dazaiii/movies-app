@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   Input,
@@ -19,6 +20,7 @@ type Language = {
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LanguageSelectorComponent implements OnInit, OnDestroy {
   @Input() language: LanguageEnum;

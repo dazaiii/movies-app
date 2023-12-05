@@ -1,4 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
 import { ActorHttpResponse } from '../../../../shared/response/credit.http-response';
 import { environment } from '../../../../environments/environment';
 
@@ -6,6 +11,7 @@ import { environment } from '../../../../environments/environment';
   selector: 'app-actor',
   templateUrl: './actor.component.html',
   styleUrls: ['./actor.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ActorComponent implements OnInit {
   @Input() actor: ActorHttpResponse;

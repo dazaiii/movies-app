@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 import { PaginatedResponse } from '../../../../shared/types/paginated.response';
 import { ReviewModel } from 'src/shared/models/review.model';
 // import { PageEvent } from '@angular/material/paginator';
@@ -7,6 +13,7 @@ import { ReviewModel } from 'src/shared/models/review.model';
   selector: 'app-review-list',
   templateUrl: './review-list.component.html',
   styleUrls: ['./review-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ReviewListComponent {
   @Input() paginatedReviews: PaginatedResponse<ReviewModel> | null;
